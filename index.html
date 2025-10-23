@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>404</h1>
+        <p>The page you're looking for doesn't exist.</p>
+
+        <hr>
+
+        <h2>About</h2>
+        <p>This site is under construction.</p>
+
+        <!-- But is it really? If you're reading this, you're already finding things. -->
+        <!-- Welcome, curious visitor. There's more here than meets the eye. -->
+        <!-- Try hovering over different elements, or checking the page source more carefully. -->
+
+        <ul>
+            <li>Home</li>
+            <li title="I build things with code and pixels">Work</li>
+            <li title="I write about technology, design, and life">Blog</li>
+            <li title="hello@example.com - But you'll have to find my real email yourself">Contact</li>
+        </ul>
+
+        <div class="hidden-section">
+            <h3>Projects</h3>
+            <p>Various experiments and side projects:</p>
+            <ul>
+                <li><a href="#" title="A minimalist todo app that uses plain text files">PlainTask</a> - Task management, simplified</li>
+                <li><a href="#" title="Open source contribution tracker">DevTrack</a> - For the committed developer</li>
+                <li><a href="#" title="A color palette generator based on nature photos">NaturePalette</a> - Design with nature</li>
+                <li><a href="#" title="Secret project - launching Q2 2024">Project X</a> - Something new (coming soon)</li>
+            </ul>
+        </div>
+
+        <div class="secret" data-secret="You found me! Email: actual.email@hidden.com">
+            <p>&nbsp;</p>
+        </div>
+
+        <hr>
+
+        <footer>
+            <p>© 2024 - Site is being updated</p>
+            <!--
+                Skills: JavaScript, Python, Go, React, Node.js, PostgreSQL, Docker, AWS
+                Interests: Open source, minimalism, privacy, indie web, retro computing
+                Currently: Building something interesting
+                Location: Somewhere on Earth
+
+                If you've made it this far, you might want to check the CSS file too.
+                Or try selecting all the text on this page.
+                Or inspect elements more carefully.
+
+                Real contact: Find the data attributes scattered throughout the page
+            -->
+            <span class="invisible">Twitter: @hidden_handle</span>
+            <span class="invisible">GitHub: github.com/seeker</span>
+            <span class="invisible">LinkedIn: in/minimal-profile</span>
+        </footer>
+
+        <div class="easter-egg" title="Konami code? Try clicking me 5 times">.</div>
+
+        <!-- More hidden content below -->
+        <div style="display:none;">
+            <h3>Hidden Blog Posts</h3>
+            <article>
+                <h4>On Minimalism</h4>
+                <p>Sometimes the most powerful websites are the ones that don't try too hard.
+                   Plain HTML has a certain honesty to it. No frameworks, no build steps,
+                   no endless loading spinners. Just content and structure.</p>
+                <p>Published: Never (or is it?)</p>
+            </article>
+            <article>
+                <h4>The Art of Hiding in Plain Sight</h4>
+                <p>The internet is full of noise. Sometimes the best way to be found
+                   is to not be too obvious about it. Let the curious find you.</p>
+                <p>Published: You tell me</p>
+            </article>
+        </div>
+
+        <noscript>
+            <p>This site works without JavaScript. That's by design.</p>
+            <p>But you're missing some interactive Easter eggs.</p>
+        </noscript>
+
+    </div>
+
+    <!--
+        Philosophy: Less is more.
+        Inspiration: The early web, when sites were made by hand.
+
+        If you're still reading, thanks for being curious.
+        The web needs more explorers like you.
+
+        P.S. - Check the page title when you hover over links.
+        P.P.S. - The footer might have invisible elements.
+        P.P.P.S. - Some divs have data attributes worth inspecting.
+    -->
+
+    <script>
+        // Minimal interactivity
+        const easterEgg = document.querySelector('.easter-egg');
+        let clickCount = 0;
+
+        if (easterEgg) {
+            easterEgg.addEventListener('click', () => {
+                clickCount++;
+                if (clickCount === 5) {
+                    easterEgg.textContent = 'You found it! 🎉';
+                    easterEgg.style.opacity = '1';
+                    setTimeout(() => {
+                        alert('Persistence pays off. You found a secret! Here\'s a quote:\n\n"The best way to predict the future is to invent it." - Alan Kay');
+                    }, 300);
+                }
+            });
+        }
+
+        // Secret key combination
+        let keys = [];
+        document.addEventListener('keydown', (e) => {
+            keys.push(e.key);
+            if (keys.length > 5) keys.shift();
+
+            if (keys.join('') === 'hello') {
+                document.querySelector('.hidden-section').style.display = 'block';
+                console.log('🔓 Hidden section unlocked! Type "world" for more...');
+            }
+
+            if (keys.join('').includes('world')) {
+                console.log('🌍 Welcome, explorer! Here are some hidden truths:');
+                console.log('- This site is intentionally minimal');
+                console.log('- Every "broken" thing is by design');
+                console.log('- View source is your friend');
+                console.log('- Real email: discoverer@findme.com');
+            }
+        });
+    </script>
+</body>
+</html>
