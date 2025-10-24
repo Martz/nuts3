@@ -1,0 +1,170 @@
+/* Intentionally minimal - making it look "unstyled" is an art form */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+    padding: 20px;
+    max-width: 100%;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: normal;
+    margin-bottom: 0;
+    color: #666;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    margin: 20px 0 10px 0;
+    color: #444;
+}
+
+h3 {
+    font-size: 1.2em;
+    font-weight: normal;
+    margin: 15px 0 10px 0;
+}
+
+p {
+    margin: 10px 0;
+    color: #555;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 30px 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 5px 0;
+    cursor: default;
+}
+
+li:hover {
+    color: #0066cc;
+    /* Hint that there might be more here */
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+    color: #999;
+}
+
+/* Hidden elements - for those who inspect */
+.hidden-section {
+    display: none;
+    margin: 20px 0;
+    padding: 15px;
+    background: #f9f9f9;
+    border-left: 3px solid #ddd;
+}
+
+.invisible {
+    opacity: 0;
+    font-size: 0.8em;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.invisible:hover {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.secret {
+    height: 20px;
+    cursor: help;
+}
+
+.secret:hover::after {
+    content: attr(data-secret);
+    display: block;
+    background: #ffffcc;
+    padding: 10px;
+    border: 1px solid #ddddaa;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+.easter-egg {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0.1;
+    cursor: pointer;
+    font-size: 2em;
+    transition: opacity 0.3s;
+}
+
+.easter-egg:hover {
+    opacity: 0.3;
+}
+
+/* Selection reveals hidden text */
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/* For the really curious ones who check media queries */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px auto;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+}
+
+/*
+   Hidden message in CSS:
+
+   If you're reading this, you're one of the few who checks stylesheets.
+   Most people don't. But you're not most people.
+
+   Here's a reward for your curiosity:
+   - Add "?dev=true" to the URL (when hosted) to see debug info
+   - Type "hello" on your keyboard to unlock a hidden section
+   - Type "world" after that for even more
+   - Hover over the invisible footer elements
+   - Click the bottom-right corner dot 5 times
+   - Check HTML comments for more treasures
+
+   This site is an experiment in hiding depth beneath simplicity.
+   The web used to be more like this - full of discovery.
+
+   Thanks for exploring.
+*/
